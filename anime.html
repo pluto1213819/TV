@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VedalTV 动漫频道 - 热血、恋爱、搞笑、科幻等各类动漫在线观看">
+  <title>动漫 - VedalTV</title>
+  <!-- 引入Tailwind CSS（浏览器版） -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- 引入Font Awesome图标库 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body class="bg-gray-50">
+  <!-- 顶部导航栏 -->
+  <header class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo区域 -->
+      <div class="flex items-center">
+        <img src="image/网站头像.jpg" alt="VedalTV" class="h-10 w-10 mr-2 rounded">
+        <span class="text-xl font-bold text-primary">VedalTV</span>
+      </div>
+      
+      <!-- 搜索框 -->
+      <div class="flex-1 max-w-xl mx-4 hidden sm:block">
+        <div class="relative">
+          <input 
+            type="text" 
+            placeholder="搜索电影、连续剧、综艺、动漫" 
+            class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          >
+          <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row py-6">
+    <!-- 左侧侧边栏 -->
+    <aside class="w-64 bg-white shadow-sm hidden md:block sticky top-[73px] h-[calc(100vh-73px)] overflow-y-auto">
+      <nav class="p-4 h-full">
+        <ul class="space-y-1">
+          <li>
+            <a href="index.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-home mr-3 text-gray-500"></i> 首页
+            </a>
+          </li>
+          <li>
+            <a href="movie.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-film mr-3 text-gray-500"></i> 电影
+            </a>
+          </li>
+          <li>
+            <a href="tv.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-tv mr-3 text-gray-500"></i> 连续剧
+            </a>
+          </li>
+          <li>
+            <a href="anime.html" class="flex items-center px-4 py-3 rounded-lg bg-red-50 text-primary font-medium transition">
+              <i class="fas fa-bolt mr-3"></i> 动漫
+            </a>
+          </li>
+          <li>
+            <a href="variety.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-microphone mr-3 text-gray-500"></i> 综艺
+            </a>
+          </li>
+          <li>
+            <a href="short.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-video mr-3 text-gray-500"></i> 纪录片
+            </a>
+          </li>
+          <li>
+            <a href="request.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-comment mr-3 text-gray-500"></i> 留言求片
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="flex-1 p-4 md:p-6 overflow-auto">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold mb-2">动漫</h1>
+        <p class="text-gray-600">二次元世界，精彩无限</p>
+                
+        <!-- 筛选器 -->
+        <div class="filter-container" id="filter-container">
+          <div class="filter-section">
+            <div class="filter-title">
+              <i class="fas fa-tags"></i> 类型
+            </div>
+            <div class="filter-options">
+              <div class="filter-option active">全部</div>
+              <div class="filter-option">热血</div>
+              <div class="filter-option">恋爱</div>
+              <div class="filter-option">搞笑</div>
+              <div class="filter-option">科幻</div>
+              <div class="filter-option">奇幻</div>
+              <div class="filter-option">悬疑</div>
+              <div class="filter-option">战斗</div>
+              <div class="filter-option">校园</div>
+              <div class="filter-option">治愈</div>
+              <div class="filter-option">冒险</div>
+              <div class="filter-option">运动</div>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <div class="filter-title">
+              <i class="fas fa-globe"></i> 地区
+            </div>
+            <div class="filter-options">
+              <div class="filter-option active">全部</div>
+              <div class="filter-option">日本</div>
+              <div class="filter-option">国产</div>
+              <div class="filter-option">美国</div>
+              <div class="filter-option">韩国</div>
+              <div class="filter-option">其他</div>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <div class="filter-title">
+              <i class="fas fa-calendar"></i> 年份
+            </div>
+            <div class="filter-options">
+              <div class="filter-option active">全部</div>
+              <div class="filter-option">2025</div>
+              <div class="filter-option">2024</div>
+              <div class="filter-option">2023</div>
+              <div class="filter-option">2022</div>
+              <div class="filter-option">2021</div>
+              <div class="filter-option">2020</div>
+              <div class="filter-option">更早</div>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <div class="filter-title">
+              <i class="fas fa-star"></i> 评分
+            </div>
+            <div class="filter-options">
+              <div class="filter-option active">全部</div>
+              <div class="filter-option">9分以上</div>
+              <div class="filter-option">8-9分</div>
+              <div class="filter-option">7-8分</div>
+              <div class="filter-option">6-7分</div>
+            </div>
+          </div>
+          
+          <div class="filter-section">
+            <div class="filter-title">
+              <i class="fas fa-tv"></i> 状态
+            </div>
+            <div class="filter-options">
+              <div class="filter-option active">全部</div>
+              <div class="filter-option">连载中</div>
+              <div class="filter-option">已完结</div>
+            </div>
+          </div>
+          
+          <div class="flex justify-between items-center mt-4">
+            <button class="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition">
+              <i class="fas fa-redo-alt mr-2"></i> 重置
+            </button>
+            <button class="px-6 py-2 bg-primary text-white rounded-lg hover:bg-red-700 transition">
+              <i class="fas fa-check mr-2"></i> 应用筛选
+            </button>
+          </div>
+        </div>
+        
+        <!-- 排序选项 -->
+        <div class="flex items-center justify-between mb-6">
+          <div class="sort-options">
+            <div class="sort-option active">
+              <i class="fas fa-fire"></i> 热门
+            </div>
+            <div class="sort-option">
+              <i class="fas fa-clock"></i> 最新
+            </div>
+            <div class="sort-option">
+              <i class="fas fa-star"></i> 评分
+            </div>
+          </div>
+          
+          <div class="text-sm text-gray-500">共 <span class="font-medium text-primary">890</span> 部动漫</div>
+        </div>
+        
+        <!-- 动漫列表 -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-5">
+          <!-- 动漫卡片1 -->
+          <div class="movie-card">
+            <a href="#" class="block">
+              <div class="relative">
+                <img src="image/龙族Ⅱ.jpg" alt="动漫1" class="w-full movie-poster" loading="lazy">
+                <div class="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  8.5
+                </div>
+              </div>
+              <div class="p-3">
+                <h3 class="text-sm font-medium mb-1 line-clamp-1">龙族Ⅱ</h3>
+                <p class="text-xs text-gray-500"> 热血</p>
+              </div>
+            </a>
+          </div>
+          
+          <!-- 动漫卡片2 -->
+          <div class="movie-card">
+            <a href="#" class="block">
+              <div class="relative">
+                <img src="image/诛仙.jpg" alt="动漫2" class="w-full movie-poster" loading="lazy">
+                <div class="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  7.9
+                </div>
+              </div>
+              <div class="p-3">
+                <h3 class="text-sm font-medium mb-1 line-clamp-1">诛仙</h3>
+                <p class="text-xs text-gray-500"> 玄幻</p>
+              </div>
+            </a>
+          </div>
+          <!-- 动漫卡片3 -->
+          <div class="movie-card">
+            <a href="#" class="block">
+              <div class="relative">
+                <img src="image/灵武大陆.jpg" alt="动漫2" class="w-full movie-poster" loading="lazy">
+                <div class="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  9.5
+                </div>
+              </div>
+              <div class="p-3">
+                <h3 class="text-sm font-medium mb-1 line-clamp-1">灵武大陆</h3>
+                <p class="text-xs text-gray-500"> 修仙</p>
+              </div>
+            </a>
+          </div>
+          <!-- 动漫卡片4 -->
+          <div class="movie-card">
+            <a href="#" class="block">
+              <div class="relative">
+                <img src="image/遮天.jpg" alt="动漫2" class="w-full movie-poster" loading="lazy">
+                <div class="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  9.1
+                </div>
+              </div>
+              <div class="p-3">
+                <h3 class="text-sm font-medium mb-1 line-clamp-1">遮天</h3>
+                <p class="text-xs text-gray-500"> 热血</p>
+              </div>
+            </a>
+          </div>
+          <!-- 动漫卡片5 -->
+          <div class="movie-card">
+            <a href="#" class="block">
+              <div class="relative">
+                <img src="image/仙逆.jpg" alt="动漫2" class="w-full movie-poster" loading="lazy">
+                <div class="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  8.1
+                </div>
+              </div>
+              <div class="p-3">
+                <h3 class="text-sm font-medium mb-1 line-clamp-1">仙逆</h3>
+                <p class="text-xs text-gray-500"> 玄幻</p>
+              </div>
+            </a>
+          </div>
+          <!-- 动漫卡片6 -->
+          <div class="movie-card">
+            <a href="#" class="block">
+              <div class="relative">
+                <img src="image/万剑王座.jpg" alt="动漫2" class="w-full movie-poster" loading="lazy">
+                <div class="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  8.5
+                </div>
+              </div>
+              <div class="p-3">
+                <h3 class="text-sm font-medium mb-1 line-clamp-1">万剑王座</h3>
+                <p class="text-xs text-gray-500"> 修仙</p>
+              </div>
+            </a>
+          </div>          
+          
+
+        </div>
+        
+        <!-- 分页 -->
+        <div class="pagination">
+          <div class="pagination-item">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="pagination-item active">1</div>
+          <div class="pagination-item">2</div>
+          <div class="pagination-item">3</div>
+          <div class="pagination-item">4</div>
+          <div class="pagination-item">5</div>
+          <div class="pagination-item">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+<script src="js/choose.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,98 @@
+﻿/* ===== 主要自定义样式 ===== */
+/* 仅保留项目特有的自定义样式，Tailwind 工具类由 @tailwindcss/browser@4 自动生成 */
+
+:root {
+  --color-primary: #e50914;
+}
+
+/* 平滑滚动 */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+/* 内容可见性优化（提升渲染性能） */
+.content-auto {
+  content-visibility: auto;
+}
+
+/* ===== 轮播图样式 ===== */
+.carousel-item {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  width: 100%;
+  pointer-events: none;
+}
+
+.carousel-item.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===== 侧边栏样式 ===== */
+.sidebar-item {
+  transition: all 0.3s ease;
+}
+
+.sidebar-item:hover {
+  transform: translateX(5px);
+}
+
+.sidebar-item.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* ===== 布局容器 ===== */
+.custom-container {
+  max-width: 1400px;
+}
+
+.sidebar-optimized {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.main-optimized {
+  width: calc(100% - 240px);
+  min-width: 0;
+}
+
+.sidebar-even {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* ===== 电影海报比例（标准 2:3） ===== */
+.movie-poster {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+/* ===== 移动端导航 ===== */
+.mobile-nav a {
+  transition: all 0.2s ease;
+}
+
+.mobile-nav a:hover {
+  transform: translateY(-2px);
+}
+
+.mobile-search.active {
+  display: flex;
+  opacity: 1;
+}
+
+/* ===== 响应式布局 ===== */
+@media (max-width: 768px) {
+  .sidebar-optimized {
+    width: 100%;
+  }
+
+  .main-optimized {
+    width: 100%;
+  }
+}

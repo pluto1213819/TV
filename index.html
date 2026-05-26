@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VedalTV - 免费在线观看电影、连续剧、动漫、综艺、纪录片，高清流畅体验">
+  <title>VedalTV</title>
+  <!-- 引入Tailwind CSS（浏览器版） -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- 引入Font Awesome图标库 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <!-- 引入自定义CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body class="bg-gray-50 smooth-scroll">
+  <!-- 顶部导航栏 -->
+  <header class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="custom-container mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo区域 -->
+      <div class="flex items-center">
+        <img src="image/网站头像.jpg" alt="VedalTV" class="h-10 w-10 mr-2 rounded">
+        <span class="text-xl font-bold text-primary">VedalTV</span>
+      </div>
+            
+      <!-- 搜索框 - 优化响应式比例 -->
+      <div class="flex-1 max-w-xl mx-4 hidden sm:block">
+        <div class="relative">
+          <input 
+            type="text" 
+            placeholder="搜索电影、连续剧、综艺、动漫" 
+            class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          >
+          <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+  
+    </div>
+  </header>
+  
+  <div class="custom-container mx-auto flex flex-col md:flex-row">
+    <!-- 左侧侧边栏（仅桌面显示） -->
+    <aside class="sidebar-optimized bg-white shadow-sm hidden md:block sticky top-[73px] h-[calc(100vh-73px)] overflow-y-auto">
+      <nav class="p-4 h-full">
+        <ul class="sidebar-even">
+          <div class="space-y-1">
+            <li>
+              <a href="index.html" class="sidebar-item active flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+                <i class="fas fa-home mr-3"></i> 首页
+              </a>
+            </li>
+            <li>
+              <a href="movie.html" class="sidebar-item flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+                <i class="fas fa-film mr-3"></i> 电影
+              </a>
+            </li>
+            <li>
+              <a href="tv.html" class="sidebar-item flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+                <i class="fas fa-tv mr-3"></i> 连续剧
+              </a>
+            </li>
+            <li>
+              <a href="anime.html" class="sidebar-item flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+                <i class="fas fa-bolt mr-3"></i> 动漫
+              </a>
+            </li>
+            <li>
+              <a href="variety.html" class="sidebar-item flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+                <i class="fas fa-microphone mr-3"></i> 综艺
+              </a>
+            </li>
+            <li>
+              <a href="short.html" class="sidebar-item flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+                <i class="fas fa-video mr-3"></i> 纪录片
+              </a>
+            </li>
+            <li>
+              <a href="request.html" class="sidebar-item flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+                <i class="fas fa-comment mr-3"></i> 留言求片
+              </a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-optimized p-4 md:p-6 overflow-auto content-auto">
+      <!-- 轮播图区域 - 优化宽高比（16:9标准比例） -->
+      <div class="relative mb-8 rounded-lg overflow-hidden shadow-md">
+        <div class="carousel relative">
+          <!-- 轮播项1 -->
+          <div class="carousel-item active">
+            <img src="image/疯狂动物城2.jpg" alt="疯狂动物城2" class="w-full aspect-video object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 md:p-6 text-white">
+              <h3 class="text-xl md:text-2xl font-bold mb-1">疯狂动物城2</h3>
+              <p class="text-xs md:text-sm mb-2 flex items-center gap-2">
+                <span>正片</span>
+                <span>•</span>
+                <span>高清版</span>
+                <span>•</span>
+                <span>艺术 / 动漫</span>
+              </p>
+              <p class="text-xs md:text-sm line-clamp-2 md:line-clamp-3">狐兔搭档陷危机，揭秘毒蛇阴谋护城市和平</p>
+            </div>
+          </div>
+          <!-- 轮播项2 -->
+          <div class="carousel-item">
+            <img src="image/0 (1).jpg" alt="惊天魔盗团3" class="w-full aspect-video object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 md:p-6 text-white">
+              <h3 class="text-xl md:text-2xl font-bold mb-1">惊天魔盗团3</h3>
+              <p class="text-xs md:text-sm mb-2 flex items-center gap-2">
+                <span>正片</span>
+                <span>•</span>
+                <span>高清</span>
+                <span>•</span>
+                <span>悬疑 / 魔术</span>
+              </p>
+              <p class="text-xs md:text-sm line-clamp-2 md:line-clamp-3">“初代四骑士” 全员回归，携手新生代盗血钻破全球犯罪网络</p>
+            </div>
+          </div>
+          <!-- 轮播项3 -->
+          <div class="carousel-item">
+            <img src="image/V2Sned19umQmvDO.thumb.1000_0.jpg" alt="唐朝诡实录3" class="w-full aspect-video object-cover">
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-4 md:p-6 text-white">
+              <h3 class="text-xl md:text-2xl font-bold mb-1">唐朝诡实录3</h3>
+              <p class="text-xs md:text-sm mb-2 flex items-center gap-2">
+                <span>正片</span>
+                <span>•</span>
+                <span>4K超清</span>
+                <span>•</span>
+                <span>古装 / 悬疑</span>
+              </p>
+              <p class="text-xs md:text-sm line-clamp-2 md:line-clamp-3">唐诡 3 回归长安，卢凌风苏无名携手破诡案护长安</p>
+            </div>
+          </div>
+        </div>
+        <!-- 轮播控制按钮 - 优化大小和位置 -->
+        <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-2 md:p-3 rounded-full hover:bg-black/80 transition z-10" id="prev-btn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/60 text-white p-2 md:p-3 rounded-full hover:bg-black/80 transition z-10" id="next-btn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <!-- 轮播指示器 -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10" id="carousel-indicators">
+          <!-- 动态生成指示器 -->
+        </div>
+      </div>
+
+      <!-- 近期热门电影区域 - 优化卡片比例和间距 -->
+      <div class="mb-10">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold">热门电影</h2>
+          <a href="movie.html" class="text-sm text-primary hover:underline flex items-center gap-1">
+            查看更多 <i class="fas fa-angle-right text-xs"></i>
+          </a>
+        </div>
+        <!-- 优化网格布局，调整不同屏幕尺寸下的列数和间距 -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-5">
+          <!-- 电影卡片1 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/狂野时代.jpg" alt="狂野时代" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">狂野时代</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.5分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片2 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/惊天魔盗团 3.jpg" alt="1" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">惊天魔盗团3</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>7.9分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片3 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/浪浪人生.jpg" alt="浪浪人生" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">浪浪人生</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>9.1分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片4 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/异性.jpg" alt="异形：夺命舰" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">异形：夺命舰</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.2分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片5 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/鬼灭之刃.jpg" alt="鬼灭之刃：无限城篇" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">鬼灭之刃：无限城篇</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.7分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片6 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/震耳欲聋.jpg" alt="震耳欲聋" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">震耳欲聋</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.9分</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 新增连续剧区域 - 保持布局一致性 -->
+      <div class="mb-10">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold">热门剧集</h2>
+          <a href="tv.html" class="text-sm text-primary hover:underline flex items-center gap-1">
+            查看更多 <i class="fas fa-angle-right text-xs"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-5">
+          <!-- 电影卡片1 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/凤凰台上.jpg" alt="凤凰台上" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">凤凰台上</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.5分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片2 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/树影迷宫.jpg" alt="树影迷宫" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">树影迷宫</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>7.9分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片3 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/命悬一生.jpg" alt="命悬一生" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">命悬一生</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>9.1分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片4 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/天地.jpg" alt="天地剑心" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">天地剑心</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.2分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片5 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/暗河传.jpg" alt="暗河传" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">暗河传</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.7分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 电影卡片6 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/亲爱的X.jpg" alt="亲爱的X" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">亲爱的X</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.9分</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <!-- 新增动漫推荐区域 -->
+      <div class="mb-10">
+        <div class="flex items-center justify-between mb-4">
+          <h2 class="text-xl font-bold">热门动漫</h2>
+          <a href="anime.html" class="text-sm text-primary hover:underline flex items-center gap-1">
+            查看更多 <i class="fas fa-angle-right text-xs"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-5">
+          <!-- 动漫卡片1 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/万剑王座.jpg" alt="动漫1" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">万剑王座</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>9.0分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 动漫卡片2 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/仙逆.jpg" alt="动漫2" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">仙逆</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.8分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 动漫卡片3 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/遮天.jpg" alt="动漫3" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">遮天</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.6分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 动漫卡片4 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/灵武大陆.jpg" alt="动漫4" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">灵武大陆</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.9分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 动漫卡片5 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/诛仙.jpg" alt="动漫5" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">诛仙</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>8.7分</span>
+              </p>
+            </div>
+          </a>
+          <!-- 动漫卡片6 -->
+          <a href="#" class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition transform hover:-translate-y-1 duration-300 block">
+            <div class="relative">
+              <img src="image/龙族Ⅱ.jpg" alt="动漫6" class="w-full movie-poster" loading="lazy">
+            </div>
+            <div class="p-3">
+              <h3 class="text-sm font-medium mb-1 line-clamp-1">龙族Ⅱ</h3>
+              <p class="text-xs text-gray-500 flex items-center gap-1">
+                <span>9.1分</span>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 引入JavaScript文件 -->
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,190 @@
+﻿/* ===== 分类页面公共样式 ===== */
+
+:root {
+  --color-primary: #e50914;
+  --color-secondary: #141414;
+}
+
+/* Tailwind 兼容的自定义颜色覆盖 */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+/* ===== 筛选器样式 ===== */
+.filter-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.filter-section {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filter-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filter-title {
+  font-weight: 600;
+  margin-bottom: 14px;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.filter-title i {
+  margin-right: 8px;
+  color: var(--color-primary);
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-option {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #e8e8e8;
+  font-size: 14px;
+}
+
+.filter-option:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.filter-option.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(229, 9, 20, 0.3);
+}
+
+/* ===== 排序选项 ===== */
+.sort-options {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.sort-option {
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color: #f8f8f8;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid #e8e8e8;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sort-option:hover {
+  background-color: #f0f0f0;
+}
+
+.sort-option.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+/* ===== 筛选器折叠/展开 ===== */
+.filter-toggle {
+  display: none;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+/* ===== 电影卡片 ===== */
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== 分页 ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.pagination-item {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.pagination-item:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination-item.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* ===== 响应式适配 ===== */
+@media (max-width: 768px) {
+  .filter-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .filter-container {
+    padding: 16px;
+  }
+
+  .filter-options {
+    gap: 8px;
+  }
+
+  .filter-option {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

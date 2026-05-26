@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="VedalTV 留言求片 - 告诉我们您想看的影片，我们会尽快为您添加">
+  <title>留言求片 - VedalTV</title>
+  <!-- 引入Tailwind CSS（浏览器版） -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- 引入Font Awesome图标库 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/request.css">
+  
+</head>
+<body class="bg-gray-50">
+  <!-- 顶部导航栏 -->
+  <header class="w-full bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <!-- Logo区域 -->
+      <div class="flex items-center">
+        <img src="image/网站头像.jpg" alt="VedalTV" class="h-10 w-10 mr-2 rounded">
+        <span class="text-xl font-bold text-primary">VedalTV</span>
+      </div>
+      
+      <!-- 搜索框 -->
+      <div class="flex-1 max-w-xl mx-4 hidden sm:block">
+        <div class="relative">
+          <input 
+            type="text" 
+            placeholder="搜索电影、连续剧、综艺、动漫" 
+            class="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
+          >
+          <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row py-6">
+    <!-- 左侧侧边栏 -->
+    <aside class="w-64 bg-white shadow-sm hidden md:block sticky top-[73px] h-[calc(100vh-73px)] overflow-y-auto">
+      <nav class="p-4 h-full">
+        <ul class="space-y-1">
+          <li>
+            <a href="index.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-home mr-3 text-gray-500"></i> 首页
+            </a>
+          </li>
+          <li>
+            <a href="movie.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-film mr-3 text-gray-500"></i> 电影
+            </a>
+          </li>
+          <li>
+            <a href="tv.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-tv mr-3 text-gray-500"></i> 连续剧
+            </a>
+          </li>
+          <li>
+            <a href="anime.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-bolt mr-3 text-gray-500"></i> 动漫
+            </a>
+          </li>
+          <li>
+            <a href="variety.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-microphone mr-3 text-gray-500"></i> 综艺
+            </a>
+          </li>
+          <li>
+            <a href="short.html" class="flex items-center px-4 py-3 rounded-lg hover:bg-gray-100 transition">
+              <i class="fas fa-video mr-3 text-gray-500"></i> 纪录片
+            </a>
+          </li>
+          <li>
+            <a href="request.html" class="flex items-center px-4 py-3 rounded-lg bg-red-50 text-primary font-medium transition">
+              <i class="fas fa-comment mr-3"></i> 留言求片
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="flex-1 p-4 md:p-6 overflow-auto">
+      <div class="mb-6">
+        <h1 class="text-2xl font-bold mb-2">留言求片</h1>
+        <p class="text-gray-600">告诉我们您想看的影片，我们会尽快为您添加</p>
+        
+        <!-- 求片表单 -->
+        <div class="form-container">
+          <form id="request-form">
+            <div class="form-group">
+              <label class="form-label" for="movie-name">
+                <i class="fas fa-film mr-2 text-primary"></i>影片名称
+              </label>
+              <input type="text" id="movie-name" class="form-input" placeholder="请输入您想看的影片名称" required>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="movie-year">
+                <i class="fas fa-calendar mr-2 text-primary"></i>影片年份
+              </label>
+              <input type="text" id="movie-year" class="form-input" placeholder="请输入影片出品年份">
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="movie-type">
+                <i class="fas fa-tags mr-2 text-primary"></i>影片类型
+              </label>
+              <select id="movie-type" class="form-select">
+                <option value="">请选择影片类型</option>
+                <option value="movie">电影</option>
+                <option value="tv">连续剧</option>
+                <option value="anime">动漫</option>
+                <option value="variety">综艺</option>
+                <option value="short">纪录片</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="movie-description">
+                <i class="fas fa-info-circle mr-2 text-primary"></i>其他信息
+              </label>
+              <textarea id="movie-description" class="form-textarea" placeholder="请提供更多关于该影片的信息，如导演、主演、剧情简介等"></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="contact">
+                <i class="fas fa-envelope mr-2 text-primary"></i>联系方式（选填）
+              </label>
+              <input type="text" id="contact" class="form-input" placeholder="邮箱或手机号，方便我们通知您">
+            </div>
+            
+            <button type="submit" class="btn-primary">
+              <i class="fas fa-paper-plane mr-2"></i>提交求片请求
+            </button>
+          </form>
+        </div>
+        
+        <!-- 最近求片列表 -->
+        <div class="mt-10">
+          <h2 class="text-xl font-bold mb-4">最近求片</h2>
+          
+          <div class="request-item">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-medium">《游戏人生2》</h3>
+              <span class="text-xs text-gray-500">2025-11-15</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-2">希望尽快上线《游戏人生2》，前两部都看过了，非常期待第三部！</p>
+            <div class="text-xs text-gray-500">
+              <span class="request-tag">动漫</span>
+              <span>用户：user123</span>
+            </div>
+          </div>
+          
+          <div class="request-item">
+            <div class="flex justify-between items-start mb-2">
+              <h3 class="font-medium">《权力的游戏》前传</h3>
+              <span class="text-xs text-gray-500">2025-11-10</span>
+            </div>
+            <p class="text-sm text-gray-600 mb-2">听说《权力的游戏》要出前传了，希望能第一时间看到！</p>
+            <div class="text-xs text-gray-500">
+              <span class="request-tag">连续剧</span>
+              <span>用户：冰火迷</span>
+            </div>
+          </div>
+          
+          <!-- 更多求片记录 -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
+
